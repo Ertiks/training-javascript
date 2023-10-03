@@ -21,7 +21,6 @@ function activebox(activeBool) {
 
 }
 
-
 isSecondBoxActive = false;
 
 //Calcul 1j de cookie
