@@ -37,6 +37,9 @@ div2.hidden = true;
 //whitebox N1
 div.innerHTML;
 
+if (extractValue() == "true") {
+    activebox(true);
+}
 
 link.addEventListener('click', function () {
 
