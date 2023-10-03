@@ -31,7 +31,7 @@ d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
 let div2 = document.createElement('div');
 footer.appendChild(div2);
 div2.innerHTML = '<button type="button">Delete Cookies</button>';
-button = div2.querySelector('button');
+buttonSubmit = div2.querySelector('button');
 div2.hidden = true;
 
 //whitebox N1
@@ -50,7 +50,7 @@ link.addEventListener('click', function () {
 
 })
 
-button.addEventListener('click', function () {
+buttonSubmit.addEventListener('click', function () {
 
 
     document.cookie = "Simple-cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";

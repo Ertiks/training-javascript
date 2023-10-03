@@ -1,0 +1,19 @@
+﻿.note{
+    border-style:solid;
+    border-color:blue;
+    border-width:1px;
+}
+.mail {
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+}
+.todo {
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+li{
+    margin: 2px;
+}
