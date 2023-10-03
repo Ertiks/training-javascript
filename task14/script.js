@@ -9,7 +9,7 @@ const buttonSearch = document.querySelectorAll('button')[1];
 const buttonReset = document.querySelectorAll('button')[2];
 const menu2 = document.querySelectorAll('select')[1];
 const inputSearch = document.querySelectorAll('input')[1];
-
+const checkbox = document.querySelectorAll('input')[2];
 
 
 //Form1
@@ -25,8 +25,14 @@ function addElement() {
 //Form2
 function HideElements() {
     listElement = bulletList.querySelectorAll('li');
+    let rbool = true;
 
-    let str = inputSearch.value;
+    if (checkbox.checked) { rbool = true; }
+    else { rbool = false; }
+
+
+
+    let str = inputSearch.value.toLowerCase();
     let search;
 
     for (let i = 0; i < listElement.length; i++) {
@@ -37,28 +43,16 @@ function HideElements() {
             search = false;
         }
 
-        else if (str != "" && listElement[i].innerHTML.includes(str) == false) {
+
+        else if (str != "" && listElement[i].innerHTML.toLowerCase().includes(str) == rbool) {
             search = false
         }
-
-
-
 
 
 
         if (search) { listElement[i].hidden = false; }
         else { listElement[i].hidden = true; }
 
-        /*
-        if (listElement[i].getAttribute('class') == menu2.value) {
-
-
-            if (str == "" || listElement[i].innerHTML.includes(str) == true) {
-                listElement[i].hidden = false;
-            }
-        }
-
-        else { listElement[i].hidden = true; }*/
     }
 }
 
